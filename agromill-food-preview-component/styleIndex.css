@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+/* font-family: 'Noto Sans JP', sans-serif; */
+
+/* Body Elements */
+
+* {
+  margin: 0;
+}
+
+#backgroundPrimary {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(252, 22%, 95%);
+}
+
+#backgroundAuxiliary {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navigation {
+  list-style-type: none;
+}
+
+.navigationItemName {
+  cursor: pointer;
+}
+
+.navigationDot {
+  text-align: center;
+  visibility: hidden;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mealContainers {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mealPreview {
+  text-align: center;
+}
+
+.mealInfo {
+  border-bottom: solid hsl(0, 0%, 83%);
+}
+
+.mealDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailKeys,
+.detailValues {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Typography */
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#brandName {
+  font-weight: 700;
+  color: hsl(195, 11%, 14%);
+}
+
+#navigation {
+  font-weight: 700;
+  color: hsl(60, 1%, 53%);
+}
+
+.headerContents {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(180, 6%, 35%);
+}
+
+.mealName {
+  font-weight: 700;
+  color: hsl(132, 6%, 15%);
+}
+
+.detailValues {
+  font-weight: 700;
+  color: hsl(0, 0%, 30%);
+}
+
+.mealNutrition,
+.detailKeys {
+  font-weight: 400;
+  color: hsl(0, 0%, 56%);
+}
+
+/* Mobile Responsive Query */
+@media screen and (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #backgroundAuxiliary {
+    background-image: url(images/background-mobile.jpg);
+    position: relative;
+    max-width: 95%;
+    width: 85%;
+    height: 90%;
+    border-radius: 0.75em;
+    box-shadow: 0.75em 0.5em 2em 0.1em #888;
+  }
+
+  #imageBackground {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  #backgroundSecondary {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 30% 70%);
+    grid-template-columns: repeat(2, 85% 15%);
+  }
+
+  #header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #brandName {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    left: -50%;
+    top: 10%;
+  }
+
+  #containerDisplay {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    padding: 1em;
+  }
+
+  #navigation {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0.5em 0.25em;
+    padding: 0 0.25em;
+    background-color: rgba(245, 230, 245, 0.3);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navigationItem {
+    display: flex;
+  }
+
+  .navigationItem + .navigationItem {
+    margin-top: 3em;
+  }
+
+  #header {
+    margin: 0 2em;
+  }
+
+  #mealDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 0.25em;
+    margin-left: 0.25em;
+  }
+
+  .mealContainers {
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .mealInfo {
+    padding-bottom: 1em;
+  }
+
+  .imageContainer {
+    margin-bottom: 1em;
+  }
+
+  .mealImage {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    top: 0;
+  }
+
+  .detailKeys,
+  .detailValues {
+    width: 100%;
+  }
+
+  /* Typohraphy */
+
+  .mealInfo,
+  #navigation {
+    font-size: 0.75rem;
+  }
+
+  .mealDetails {
+    font-size: 0.5rem;
+  }
+
+  .navigationItem {
+    color: hsl(60, 1%, 24%);
+  }
+}
+
+/* Desktop Responsive Query */
+@media screen and (min-width: 768px) {
+  #backgroundAuxiliary {
+    background-image: url(images/background-desktop.jpg);
+    position: relative;
+    width: 80%;
+    height: 90%;
+    border-radius: 1em;
+    box-shadow: 0.75em 0.5em 2em 0.1em #888;
+  }
+
+  #imageBackground {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  #backgroundSecondary {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  #brandName {
+    margin: 0.5em 0 0 0.75em;
+  }
+
+  #navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #header {
+    margin: 0 3.5em;
+  }
+
+  .navigationItem + .navigationItem {
+    margin-left: 5em;
+  }
+
+  #containerDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+  }
+
+  #mealDisplay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  .mealContainers {
+    width: 20%;
+    padding: 5em 0.25em 1.5em 0.25em;
+    border-radius: 0.5em;
+  }
+
+  .mealContainers + .mealContainers {
+    margin-right: 1em;
+  }
+
+  .imageContainer {
+    top: -22.5%;
+    margin-bottom: 1em;
+    position: absolute;
+  }
+
+  .mealImage {
+    position: relative;
+    left: 32%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .mealInfo {
+    padding-bottom: 1em;
+  }
+
+  .mealDetails {
+    padding-top: 1em;
+  }
+
+  .detailKeys,
+  .detailValues {
+    width: 100%;
+  }
+
+  .mealCookingTime,
+  .timeValue {
+    margin-right: 1em;
+  }
+
+  /* Tpyography */
+
+  .headerContents {
+    font-size: 2rem;
+  }
+}
